@@ -1,0 +1,2313 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "bd6f6199",
+   "metadata": {},
+   "source": [
+    "# Practical_6: Numpy"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "de325ed6",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "\n",
+    "### Exercise 1:\n",
+    "Create a NumPy array of integers from 1 to 10.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "9b904697",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[ 1  2  3  4  5  6  7  8  9 10]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 1\n",
+    "import numpy as np\n",
+    "\n",
+    "array = np.arange(1, 11)\n",
+    "print(array)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "745710c7",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 2:\n",
+    "Create a 3x3 NumPy array filled with zeros.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "875235f1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[0. 0. 0.]\n",
+      " [0. 0. 0.]\n",
+      " [0. 0. 0.]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 2\n",
+    "import numpy as np\n",
+    "\n",
+    "zero_array = np.zeros((3, 3))\n",
+    "print(zero_array)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a542ea80",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 3:\n",
+    "Create a NumPy array of 10 evenly spaced numbers between 0 and 5.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "97c6ba4a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[0.         0.55555556 1.11111111 1.66666667 2.22222222 2.77777778\n",
+      " 3.33333333 3.88888889 4.44444444 5.        ]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 3\n",
+    "import numpy as np\n",
+    "\n",
+    "array = np.linspace(0, 5, 10)\n",
+    "print(array)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e92d80cc",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 4:\n",
+    "Create a 5x5 identity matrix using NumPy.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "c5213bd2",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[1. 0. 0. 0. 0.]\n",
+      " [0. 1. 0. 0. 0.]\n",
+      " [0. 0. 1. 0. 0.]\n",
+      " [0. 0. 0. 1. 0.]\n",
+      " [0. 0. 0. 0. 1.]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 4\n",
+    "import numpy as np\n",
+    "\n",
+    "identity_matrix = np.eye(5)\n",
+    "print(identity_matrix)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a16f88e7",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 5:\n",
+    "Create a 4x4 matrix with random values between 0 and 1.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "2b16922b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[2.77020710e-01 2.56477409e-01 3.86020480e-01 3.61231867e-01]\n",
+      " [1.28232504e-04 8.26081115e-01 3.65483931e-02 2.87041366e-01]\n",
+      " [6.27417212e-01 7.22468734e-01 8.08817946e-01 1.59288322e-01]\n",
+      " [3.77846968e-03 7.99848009e-01 9.50562633e-01 4.64878857e-01]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 5\n",
+    "import numpy as np\n",
+    "\n",
+    "random_matrix = np.random.rand(4, 4)\n",
+    "print(random_matrix)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cc9af8fd",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 6:\n",
+    "Find the shape of a NumPy array.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "359864d2",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(2, 3)\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 6\n",
+    "import numpy as np\n",
+    "array = np.array([[1, 2, 3], [4, 5, 6]])\n",
+    "print(array.shape)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ada0aff6",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 7:\n",
+    "Reshape a 1D NumPy array of 16 elements into a 4x4 matrix.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "43fcb4b3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[ 0  1  2  3]\n",
+      " [ 4  5  6  7]\n",
+      " [ 8  9 10 11]\n",
+      " [12 13 14 15]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 7\n",
+    "import numpy as np\n",
+    "array_1d = np.arange(16)\n",
+    "array_4x4 = array_1d.reshape(4, 4)\n",
+    "\n",
+    "print(array_4x4)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d384142a",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 8:\n",
+    "Find the data type of the elements in a NumPy array.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "bf4dca5a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "int32\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 8\n",
+    "import numpy as np\n",
+    "\n",
+    "array = np.array([1, 2, 3, 4])\n",
+    "print(array.dtype)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c295ca54",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 9:\n",
+    "Create a NumPy array of integers from 1 to 100 and find all even numbers in the array.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "28a61c5e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[  2   4   6   8  10  12  14  16  18  20  22  24  26  28  30  32  34  36\n",
+      "  38  40  42  44  46  48  50  52  54  56  58  60  62  64  66  68  70  72\n",
+      "  74  76  78  80  82  84  86  88  90  92  94  96  98 100]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 9\n",
+    "import numpy as np\n",
+    "arr = np.arange(1, 101)\n",
+    "even_numbers = arr[arr % 2 == 0]\n",
+    "\n",
+    "print(even_numbers)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "72103956",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 10:\n",
+    "Generate a 6x6 matrix of random integers between 10 and 50.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "ce04300e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[48 32 13 26 35 15]\n",
+      " [22 44 40 22 11 46]\n",
+      " [50 42 21 36 46 34]\n",
+      " [29 12 34 44 29 21]\n",
+      " [49 15 17 34 29 31]\n",
+      " [32 13 49 49 27 34]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 10\n",
+    "import numpy as np\n",
+    "\n",
+    "random_matrix = np.random.randint(10, 51, size=(6, 6))\n",
+    "print(random_matrix)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3dd1a085",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 11:\n",
+    "Slice a 2D NumPy array to extract a submatrix.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 101,
+   "id": "b8fc90ba",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original Array:\n",
+      "[[1 2 3]\n",
+      " [4 5 6]\n",
+      " [7 8 9]]\n",
+      "\n",
+      "Submatrix:\n",
+      "[[2 3]\n",
+      " [5 6]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 11\n",
+    "import numpy as np\n",
+    "arr = np.array([\n",
+    "    [1, 2, 3],\n",
+    "    [4, 5, 6],\n",
+    "    [7, 8, 9]\n",
+    "])\n",
+    "submatrix = arr[0:2, 1:3]\n",
+    "print(\"Original Array:\")\n",
+    "print(arr)\n",
+    "\n",
+    "print(\"\\nSubmatrix:\")\n",
+    "print(submatrix)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "73a4344c",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 12:\n",
+    "Calculate the sum of all elements in a NumPy array.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 102,
+   "id": "3c417ff3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "21\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 12\n",
+    "import numpy as np\n",
+    "arr = np.array([[1, 2, 3],\n",
+    "                [4, 5, 6]])\n",
+    "total_sum = arr.sum()\n",
+    "print(total_sum)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c2346362",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 13:\n",
+    "Calculate the mean, median, and standard deviation of a NumPy array.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 103,
+   "id": "95e57182",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Mean: 5.0\n",
+      "Median: 5.0\n",
+      "Standard Deviation: 2.581988897471611\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 13\n",
+    "import numpy as np\n",
+    "arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])\n",
+    "mean_val = np.mean(arr)\n",
+    "median_val = np.median(arr)\n",
+    "std_dev = np.std(arr)\n",
+    "print(\"Mean:\", mean_val)\n",
+    "print(\"Median:\", median_val)\n",
+    "print(\"Standard Deviation:\", std_dev)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "67a4fdbd",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 14:\n",
+    "Find the maximum and minimum values in a NumPy array.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 106,
+   "id": "7959c765",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Maximum value: 9\n",
+      "Minimum value: 1\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 14\n",
+    "import numpy as np\n",
+    "\n",
+    "arr = np.array([4, 7, 1, 9, 3, 8])\n",
+    "max = np.max(arr)\n",
+    "min= np.min(arr)\n",
+    "print(\"Maximum value:\", max_value)\n",
+    "print(\"Minimum value:\", min_value)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8a705cd1",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 15:\n",
+    "Create a NumPy array of 20 random integers and find the index of the maximum value.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 107,
+   "id": "c6748d73",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Array: [75 37 53 11 41 87 98 26 53 83 74 10 76  2 22 85 99 26 31  2]\n",
+      "Index of the maximum value: 16\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 15\n",
+    "import numpy as np\n",
+    "\n",
+    "arr = np.random.randint(0, 100, size=20)\n",
+    "print(\"Array:\", arr)\n",
+    "max_index = np.argmax(arr)\n",
+    "print(\"Index of the maximum value:\", max_index)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "467ca6ac",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 16:\n",
+    "Create a NumPy array and reverse its elements.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 108,
+   "id": "0a178eb6",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([9, 8, 7, 6, 5, 4, 3, 2, 1, 0])"
+      ]
+     },
+     "execution_count": 108,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 16\n",
+    "import numpy as np\n",
+    "arr16 = np.arange(10)[::-1]\n",
+    "arr16"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b7d8ec92",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 17:\n",
+    "Create a 3x3 matrix and multiply it element-wise by another 3x3 matrix.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 109,
+   "id": "847ddc05",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[ 9,  6,  6],\n",
+       "       [40, 14,  8],\n",
+       "       [ 8, 72, 12]])"
+      ]
+     },
+     "execution_count": 109,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 17\n",
+    "import numpy as np\n",
+    "mat1 = np.random.randint(1, 10, (3, 3))\n",
+    "mat2 = np.random.randint(1, 10, (3, 3))\n",
+    "elementwise_product17 = mat1 * mat2\n",
+    "elementwise_product17"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "58512446",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 18:\n",
+    "Create a diagonal matrix from a given 1D array.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 110,
+   "id": "bd7e9321",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Diagonal matrix:\n",
+      " [[10  0  0  0]\n",
+      " [ 0 20  0  0]\n",
+      " [ 0  0 30  0]\n",
+      " [ 0  0  0 40]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 18\n",
+    "import numpy as np\n",
+    "array = np.array([10, 20, 30, 40])\n",
+    "diagonal_matrix = np.diag(array)\n",
+    "print(\"Diagonal matrix:\\n\", diagonal_matrix)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "10be19e0",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 19:\n",
+    "Perform matrix multiplication on two 2D NumPy arrays.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 115,
+   "id": "c287973c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Matrix multiplication result (A * B):\n",
+      "[[19 22]\n",
+      " [43 50]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 19\n",
+    "import numpy as np\n",
+    "\n",
+    "A = np.array([[1, 2],[3, 4]])\n",
+    "              \n",
+    "B = np.array([[5, 6],[7, 8]])\n",
+    "              \n",
+    "result = np.dot(A, B)\n",
+    "\n",
+    "print(\"Matrix multiplication result (A * B):\")\n",
+    "print(result)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "932aa100",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 20:\n",
+    "Flatten a 2D NumPy array into a 1D array.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 116,
+   "id": "0b2a7505",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Flattened 1D array: [10 20 30 40 50 60]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 20\n",
+    "import numpy as np\n",
+    "\n",
+    "array_2d = np.array([[10, 20, 30],[40, 50, 60]])\n",
+    "                     \n",
+    "flattened_array = array_2d.flatten()\n",
+    "print(\"Flattened 1D array:\", flattened_array)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "43e4204e",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 21:\n",
+    "Stack two NumPy arrays vertically.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 117,
+   "id": "2fab6ed6",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[1, 2],\n",
+       "       [3, 4],\n",
+       "       [5, 6]])"
+      ]
+     },
+     "execution_count": 117,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 21\n",
+    "a21 = np.array([[1, 2], [3, 4]])\n",
+    "b21 = np.array([[5, 6]])\n",
+    "stacked_v21 = np.vstack((a21, b21))\n",
+    "stacked_v21"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "54a62aed",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 22:\n",
+    "Stack two NumPy arrays horizontally.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 118,
+   "id": "38c62fcb",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[1, 2, 5],\n",
+       "       [3, 4, 6]])"
+      ]
+     },
+     "execution_count": 118,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 22\n",
+    "import numpy as np\n",
+    "stacked_h22 = np.hstack((a21, b21.T))\n",
+    "stacked_h22"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "348ee442",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 23:\n",
+    "Split a NumPy array into multiple sub-arrays.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 119,
+   "id": "bb591997",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[array([0, 1, 2]), array([3, 4, 5]), array([6, 7, 8]), array([ 9, 10, 11])]"
+      ]
+     },
+     "execution_count": 119,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 23\n",
+    "import numpy as np\n",
+    "arr23 = np.arange(12)\n",
+    "split23 = np.split(arr23, 4)\n",
+    "split23"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b1f38f5f",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 24:\n",
+    "Generate a random NumPy array and round each element to two decimal places.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 120,
+   "id": "9627a34c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[0.64, 0.96, 0.38, 0.77, 0.08],\n",
+       "       [0.82, 0.76, 0.61, 0.38, 0.27],\n",
+       "       [0.96, 0.99, 0.84, 0.64, 0.11],\n",
+       "       [0.87, 0.09, 0.7 , 0.49, 0.59],\n",
+       "       [0.23, 0.94, 0.76, 0.06, 0.79]])"
+      ]
+     },
+     "execution_count": 120,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 24\n",
+    "import numpy as np\n",
+    "arr24 = np.random.rand(5, 5)\n",
+    "rounded24 = np.round(arr24, 2)\n",
+    "rounded24\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "33eff49a",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 25:\n",
+    "Find the unique elements of a NumPy array.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "820d6014",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1 2 3 4 5]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 25\n",
+    "import numpy as np\n",
+    "arr = np.array([1, 2, 2, 3, 4, 4, 5])\n",
+    "unique_vals = np.unique(arr)\n",
+    "print(unique_vals)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a82dfd26",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 26:\n",
+    "Replace all elements in a NumPy array that are less than a specific value with that value.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 121,
+   "id": "9317d8ff",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[5 2 8 1]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 26\n",
+    "import numpy as np\n",
+    "arr = np.array([5, 2, 8, 1])\n",
+    "\n",
+    "print(arr)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0b211e1c",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 27:\n",
+    "Find the cumulative sum of the elements in a NumPy array.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 122,
+   "id": "d03b7264",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([1, 3, 6])"
+      ]
+     },
+     "execution_count": 122,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 27\n",
+    "import numpy as np\n",
+    "arr27 = np.array([1, 2, 3])\n",
+    "cumsum27 = np.cumsum(arr27)\n",
+    "cumsum27"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "837642b7",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 28:\n",
+    "Create a NumPy array and find the number of non-zero elements in it.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 123,
+   "id": "fa2565c6",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3"
+      ]
+     },
+     "execution_count": 123,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 28\n",
+    "import numpy as np\n",
+    "arr28 = np.array([0, 1, 0, 2, 3])\n",
+    "nonzero28 = np.count_nonzero(arr28)\n",
+    "nonzero28"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7d1f3704",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 29:\n",
+    "Create a NumPy array of random integers and sort it in ascending order.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 124,
+   "id": "dfa23a6e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([ 0, 12, 26, 43, 53, 69, 69, 71, 72, 91])"
+      ]
+     },
+     "execution_count": 124,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 29\n",
+    "import numpy as np\n",
+    "arr29 = np.random.randint(0, 100, 10)\n",
+    "sorted29 = np.sort(arr29)\n",
+    "sorted29"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "295b7ea8",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 30:\n",
+    "Find the row-wise and column-wise sum of a 3x3 matrix.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 125,
+   "id": "963df701",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[16 25  9] [18 19 13]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 30\n",
+    "import numpy as np\n",
+    "mat30 = np.random.randint(1, 10, (3, 3))\n",
+    "row_sum30 = mat30.sum(axis=1)\n",
+    "col_sum30 = mat30.sum(axis=0)\n",
+    "print(row_sum30, col_sum30)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "158756fa",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 31:\n",
+    "Generate a 2D NumPy array with random values and normalize it (scale the values between 0 and 1).\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 93,
+   "id": "32ba8b29",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[0.48674093, 0.        , 0.29621578],\n",
+       "       [0.31361003, 1.        , 0.35751138],\n",
+       "       [0.28143553, 0.70275574, 0.09313584]])"
+      ]
+     },
+     "execution_count": 93,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 31\n",
+    "import numpy as np\n",
+    "arr31 = np.random.rand(3, 3)\n",
+    "norm31 = (arr31 - arr31.min()) / (arr31.max() - arr31.min())\n",
+    "norm31"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d3eeceaa",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 32:\n",
+    "Create two NumPy arrays and find the dot product.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 92,
+   "id": "5722e16b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "11"
+      ]
+     },
+     "execution_count": 92,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 32\n",
+    "import numpy as np\n",
+    "a32 = np.array([1, 2])\n",
+    "b32 = np.array([3, 4])\n",
+    "dot32 = np.dot(a32, b32)\n",
+    "dot32"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5b0c848f",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 33:\n",
+    "Find the trace of a square NumPy matrix.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 91,
+   "id": "6d6e90c2",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "5"
+      ]
+     },
+     "execution_count": 91,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 33\n",
+    "import numpy as np\n",
+    "mat33 = np.array([[1, 2], [3, 4]])\n",
+    "trace33 = np.trace(mat33)\n",
+    "trace33"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "74f1f77e",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 34:\n",
+    "Create a 2D array and swap two rows.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 90,
+   "id": "24621129",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[3, 4],\n",
+       "       [1, 2]])"
+      ]
+     },
+     "execution_count": 90,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 34\n",
+    "import numpy as np\n",
+    "mat34 = np.array([[1, 2], [3, 4]])\n",
+    "mat34[[0, 1]] = mat34[[1, 0]]\n",
+    "mat34"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7875d348",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 35:\n",
+    "Create a 1D NumPy array and convert it into a column vector.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 89,
+   "id": "0039acda",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[1],\n",
+       "       [2],\n",
+       "       [3]])"
+      ]
+     },
+     "execution_count": 89,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 35\n",
+    "import numpy as np\n",
+    "arr35 = np.array([1, 2, 3])\n",
+    "col_vec35 = arr35[:, np.newaxis]\n",
+    "col_vec35"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "234e605c",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 36:\n",
+    "Find the determinant of a 3x3 matrix.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 88,
+   "id": "9798d9c7",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.9999999999999987"
+      ]
+     },
+     "execution_count": 88,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 36\n",
+    "import numpy as np\n",
+    "mat36 = np.array([[1, 2, 3], [0, 1, 4], [5, 6, 0]])\n",
+    "det36 = np.linalg.det(mat36)\n",
+    "det36"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6656af00",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 37:\n",
+    "Find the eigenvalues and eigenvectors of a 2x2 matrix.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 87,
+   "id": "89d64421",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[3. 2.] [[0.89442719 0.70710678]\n",
+      " [0.4472136  0.70710678]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 37\n",
+    "import numpy as np\n",
+    "mat37 = np.array([[4, -2], [1, 1]])\n",
+    "eigvals37, eigvecs37 = np.linalg.eig(mat37)\n",
+    "print(eigvals37, eigvecs37)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7dc92bbb",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 38:\n",
+    "Solve a system of linear equations using NumPy.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 86,
+   "id": "9aad2d7e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([1., 2.])"
+      ]
+     },
+     "execution_count": 86,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 38\n",
+    "import numpy as np\n",
+    "#Solve: 4x + 2y = 8, 2x + 4y = 10\n",
+    "A38 = np.array([[4, 2], [2, 4]])\n",
+    "b38 = np.array([8, 10])\n",
+    "solution38 = np.linalg.solve(A38, b38)\n",
+    "solution38"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4f146ae7",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 39:\n",
+    "Add Gaussian noise to a NumPy array.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 85,
+   "id": "1162c82d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([0.50634528, 1.76671694, 3.91100276])"
+      ]
+     },
+     "execution_count": 85,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 39\n",
+    "import numpy as np\n",
+    "arr39 = np.array([1, 2, 3])\n",
+    "noise39 = np.random.normal(0, 1, arr39.shape)\n",
+    "noisy_arr39 = arr39 + noise39\n",
+    "noisy_arr39"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "24f6d12f",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 40:\n",
+    "Create a 4x4 matrix and extract the diagonal elements.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 82,
+   "id": "228d823c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([8, 9, 6, 5])"
+      ]
+     },
+     "execution_count": 82,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 40\n",
+    "import numpy as np\n",
+    "mat40 = np.random.randint(1, 10, (4, 4))\n",
+    "diag40 = np.diag(mat40)\n",
+    "diag40"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6fe4e0e1",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 41:\n",
+    "Generate a NumPy array of 100 random values and clip the values to a range between 10 and 50.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 126,
+   "id": "250c818c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([40.        , 40.        , 40.        , 26.87111654, 36.78246497,\n",
+       "       40.        , 36.21384861, 40.        , 28.59622715, 30.26478793,\n",
+       "       38.00727261, 40.        , 20.        , 37.39093255, 40.        ,\n",
+       "       24.6379144 , 40.        , 40.        , 40.        , 28.86712125,\n",
+       "       30.88339312, 40.        , 40.        , 40.        , 40.        ,\n",
+       "       40.        , 34.2390911 , 20.        , 20.        , 20.        ,\n",
+       "       40.        , 40.        , 40.        , 40.        , 20.        ,\n",
+       "       22.83826256, 36.84158792, 40.        , 40.        , 40.        ,\n",
+       "       20.        , 40.        , 40.        , 29.72847748, 40.        ,\n",
+       "       20.        , 40.        , 40.        , 40.        , 40.        ,\n",
+       "       40.        , 40.        , 40.        , 27.73069778, 20.        ,\n",
+       "       20.        , 28.7471793 , 35.35490857, 37.2180406 , 40.        ,\n",
+       "       40.        , 40.        , 36.50359598, 20.        , 20.        ,\n",
+       "       40.        , 22.40827335, 20.        , 40.        , 35.97464979,\n",
+       "       20.        , 40.        , 29.45633277, 40.        , 20.68231061,\n",
+       "       38.33672927, 40.        , 40.        , 40.        , 20.        ,\n",
+       "       40.        , 40.        , 40.        , 40.        , 40.        ,\n",
+       "       40.        , 20.        , 40.        , 40.        , 20.        ,\n",
+       "       20.        , 40.        , 20.        , 40.        , 20.        ,\n",
+       "       40.        , 32.54989989, 33.51674451, 40.        , 20.        ])"
+      ]
+     },
+     "execution_count": 126,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 41\n",
+    "import numpy as np\n",
+    "arr21 = np.random.rand(100) * 100\n",
+    "clipped21 = np.clip(arr21, 20, 40)\n",
+    "clipped21"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0aa4963a",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 42:\n",
+    "Create a 2D NumPy array and replace all negative values with zero.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 80,
+   "id": "c33cf5e2",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[1, 0],\n",
+       "       [0, 4]])"
+      ]
+     },
+     "execution_count": 80,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 42\n",
+    "import numpy as np\n",
+    "arr42 = np.array([[1, -1], [-5, 4]])\n",
+    "arr42[arr42 < 0] = 0\n",
+    "arr42"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9902ee70",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 43:\n",
+    "Find the inner and outer products of two NumPy arrays.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 79,
+   "id": "36f488c8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[3 4]\n",
+      " [6 8]] 11\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 43\n",
+    "import numpy as np\n",
+    "a43 = np.array([1, 2])\n",
+    "b43 = np.array([3, 4])\n",
+    "inner43 = np.inner(a43, b43)\n",
+    "outer43 = np.outer(a43, b43)\n",
+    "print(outer43, inner43)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7dce9fa3",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 44:\n",
+    "Calculate the pairwise distances between points in a NumPy array.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 77,
+   "id": "94067655",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[0.        , 0.1546658 , 0.22783854, 0.71292599],\n",
+       "       [0.1546658 , 0.        , 0.14975514, 0.6869489 ],\n",
+       "       [0.22783854, 0.14975514, 0.        , 0.53755889],\n",
+       "       [0.71292599, 0.6869489 , 0.53755889, 0.        ]])"
+      ]
+     },
+     "execution_count": 77,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise \n",
+    "import numpy as np\n",
+    "points44 = np.random.rand(4, 2)\n",
+    "from scipy.spatial.distance import pdist, squareform\n",
+    "distances44 = squareform(pdist(points44))\n",
+    "distances44"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d4b272d3",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 45:\n",
+    "Create a structured NumPy array with fields for `name`, `age`, and `height`.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 75,
+   "id": "9b18e4f0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([('Alice', 25, 5.5), ('Bob', 30, 6. )],\n",
+       "      dtype=[('name', '<U10'), ('age', '<i4'), ('height', '<f4')])"
+      ]
+     },
+     "execution_count": 75,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 45\n",
+    "import numpy as np\n",
+    "arr45 = np.array([('Alice', 25, 5.5), ('Bob', 30, 6.0)],\n",
+    "                 dtype=[('name', 'U10'), ('age', 'i4'), ('height', 'f4')])\n",
+    "arr45"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "577f3e80",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 46:\n",
+    "Create a 5x5 matrix of random integers and count the occurrences of each unique value.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 73,
+   "id": "639b01fd",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([3, 4, 6, 3, 9], dtype=int64)"
+      ]
+     },
+     "execution_count": 73,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 46\n",
+    "import numpy as np\n",
+    "mat46 = np.random.randint(0, 5, (5, 5))\n",
+    "unique_vals46, counts46 = np.unique(mat46, return_counts=True)\n",
+    "counts46"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e716555f",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 47:\n",
+    "Generate a random 3x3 NumPy array and subtract the mean of each row from the corresponding row.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 72,
+   "id": "03747d27",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[ 0.30714245, -0.00835859, -0.29878386],\n",
+       "       [-0.22458623,  0.20303001,  0.02155622],\n",
+       "       [ 0.13435644, -0.18906676,  0.05471032]])"
+      ]
+     },
+     "execution_count": 72,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 47\n",
+    "import numpy as np\n",
+    "mat47 = np.random.rand(3, 3)\n",
+    "mean_row47 = mat47.mean(axis=1, keepdims=True)\n",
+    "centered47 = mat47 - mean_row47\n",
+    "centered47"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "89148fb1",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 48:\n",
+    "Create a NumPy array of random integers and check if any of the values are greater than 50.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 71,
+   "id": "d329ca63",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 71,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 48\n",
+    "import numpy as np\n",
+    "arr48 = np.random.randint(0, 100, 10)\n",
+    "any_gt_50 = np.any(arr48 > 50)\n",
+    "any_gt_50"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "806622f5",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 49:\n",
+    "Calculate the moving average of a 1D NumPy array.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 70,
+   "id": "866232ff",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([0.59260851, 0.53609868, 0.55739752, 0.47889952, 0.51130328,\n",
+       "       0.50146089, 0.31325785, 0.24837662])"
+      ]
+     },
+     "execution_count": 70,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 49\n",
+    "import numpy as np\n",
+    "arr49 = np.random.rand(10)\n",
+    "window = 3\n",
+    "moving_avg49 = np.convolve(arr49, np.ones(window)/window, mode='valid')\n",
+    "moving_avg49"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9313446b",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 50:\n",
+    "Find the Pearson correlation coefficient between two NumPy arrays.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 69,
+   "id": "09c184ab",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Correlation: 1.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 50\n",
+    "import numpy as np\n",
+    "\n",
+    "x = np.array([10, 20, 30])\n",
+    "y = np.array([15, 25, 35])\n",
+    "r = np.corrcoef(x, y)[0, 1]\n",
+    "print(\"Correlation:\", r)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8ee11395",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 51:\n",
+    "Convert a NumPy array of radians to degrees.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "id": "34ac5b8c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([  0.,  90., 180.])"
+      ]
+     },
+     "execution_count": 66,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 51\n",
+    "import numpy as np\n",
+    "rad51 = np.array([0, np.pi/2, np.pi])\n",
+    "deg51 = np.degrees(rad51)\n",
+    "deg51"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f4fd9563",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 52:\n",
+    "Create a random NumPy array and compute its variance and standard deviation.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "id": "0559791a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0.08296221105156662 0.2880316146737483\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 52\n",
+    "import numpy as np\n",
+    "arr42 = np.random.rand(20)\n",
+    "var42 = np.var(arr42)\n",
+    "std42 = np.std(arr42)\n",
+    "print(var42, std42)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b5bed93d",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 53:\n",
+    "Create a 2D NumPy array and find the indices of the maximum values along each axis.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "id": "37168529",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1 2 2] [2 2 2]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 53\n",
+    "import numpy as np\n",
+    "arr53 = np.random.rand(3, 3)\n",
+    "max_idx_row53 = np.argmax(arr53, axis=1)\n",
+    "max_idx_col53 = np.argmax(arr, axis=0)\n",
+    "print(max_idx_row53, max_idx_col53)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fd672293",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 54:\n",
+    "Compute the inverse of a 2x2 NumPy matrix.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "id": "d9eebfee",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[ 0.6, -0.7],\n",
+       "       [-0.2,  0.4]])"
+      ]
+     },
+     "execution_count": 58,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 54\n",
+    "import numpy as np\n",
+    "mat54 = np.array([[4, 7], [2, 6]])\n",
+    "inv54 = np.linalg.inv(mat54)\n",
+    "inv54"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d635d87b",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 55:\n",
+    "Create a NumPy array of 10 random values and standardize it (mean 0, variance 1).\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 57,
+   "id": "dc8ffa7d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([-0.95684037, -2.32434382,  0.2832998 ,  0.19430159,  0.22688579,\n",
+       "        0.57770081,  1.13360729, -0.74047863,  0.63578765,  0.97007989])"
+      ]
+     },
+     "execution_count": 57,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 55\n",
+    "import numpy as np\n",
+    "arr55 = np.random.rand(10)\n",
+    "standardized55 = (arr55 - np.mean(arr55)) / np.std(arr55)\n",
+    "standardized55"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6db1e281",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 56:\n",
+    "Perform element-wise addition and subtraction on two NumPy arrays.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 56,
+   "id": "e8d4d852",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[5 7 9] [-3 -3 -3]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 56\n",
+    "import numpy as np\n",
+    "a56 = np.array([1, 2, 3])\n",
+    "b56 = np.array([4, 5, 6])\n",
+    "add56 = a56 + b56\n",
+    "sub56 = a56 - b56\n",
+    "print(add56, sub56)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "843ba956",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 57:\n",
+    "Create a NumPy array of random values and find the maximum element's index.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 55,
+   "id": "e4cbc318",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2"
+      ]
+     },
+     "execution_count": 55,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 57\n",
+    "import numpy as np\n",
+    "arr57 = np.random.rand(10)\n",
+    "max_index57 = np.argmax(arr57)\n",
+    "max_index57"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e8356250",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 58:\n",
+    "Create a 3x3 NumPy array and rotate it by 90 degrees.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "id": "f80c6616",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[2, 5, 8],\n",
+       "       [1, 4, 7],\n",
+       "       [0, 3, 6]])"
+      ]
+     },
+     "execution_count": 50,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 58\n",
+    "import numpy as np\n",
+    "arr58 = np.arange(9).reshape(3, 3)\n",
+    "rotated58 = np.rot90(arr58)\n",
+    "rotated58\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5bdbf96d",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 59:\n",
+    "Compute the Frobenius norm of a matrix.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "id": "bb81b41a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "5.477225575051661"
+      ]
+     },
+     "execution_count": 48,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 59\n",
+    "import numpy as np\n",
+    "mat59 = np.array([[1, 2], [3, 4]])\n",
+    "frobenius59 = np.linalg.norm(mat59)\n",
+    "frobenius59"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9388b0db",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---\n",
+    "\n",
+    "### Exercise 60:\n",
+    "Create a 3D NumPy array and slice out a subarray.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "id": "f051d3a2",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[[10, 11],\n",
+       "        [13, 14],\n",
+       "        [16, 17]],\n",
+       "\n",
+       "       [[19, 20],\n",
+       "        [22, 23],\n",
+       "        [25, 26]]])"
+      ]
+     },
+     "execution_count": 49,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Exercise 60\n",
+    "import numpy as np\n",
+    "arr60 = np.arange(27).reshape(3, 3, 3)\n",
+    "subarr60 = arr60[1:, :, 1:]\n",
+    "subarr60"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9cb79001",
+   "metadata": {},
+   "source": [
+    "\n",
+    "---"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
